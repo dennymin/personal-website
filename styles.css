@@ -1,0 +1,19 @@
+* {
+  font-family: monospace;
+}
+
+.slide-in-from-left {
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
