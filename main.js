@@ -14,6 +14,13 @@ const testAsync = async () => {
 const $drawerMenu = document.querySelector('.drawer-button')
 const $drawer = document.querySelector('.drawer');
 const slideOut = () => {
-  $drawer.classList.toggle('drawer-active')
+  $drawer.classList.toggle('drawer-active',true)
 }
 $drawerMenu.addEventListener('click', slideOut)
+
+const clickAway = (event) => {
+  if (!event.target.closest('.drawer') && !event.target.classList.contains('drawer-button')) {
+    $drawer.classList.toggle('drawer-active', false);
+  }
+}
+document.addEventListener('click', clickAway)
